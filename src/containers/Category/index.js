@@ -1,21 +1,21 @@
 import React from "react";
 import { useParams } from "react-router";
-import Articles from "../../components/Articles";
+import Blogs from "../../components/Blogs";
 import Query from "../../components/Query";
-import CATEGORY_ARTICLES_QUERY from "../../queries/category/articles";
+import CATEGORY_BLOGS_QUERY from "../../queries/category/blogs";
 
 const Category = () => {
   let { id } = useParams();
 
   return (
-    <Query query={CATEGORY_ARTICLES_QUERY} id={id}>
+    <Query query={CATEGORY_BLOGS_QUERY} id={id}>
       {({ data: { category } }) => {
         return (
           <div>
             <div className="uk-section">
               <div className="uk-container uk-container-large">
                 <h1>{category.name}</h1>
-                <Articles articles={category.articles} />
+                <Blogs blogs={category.blogs} />
               </div>
             </div>
           </div>

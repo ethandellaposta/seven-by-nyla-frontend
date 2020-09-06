@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
-const ARTICLE_QUERY = gql`
-  query Articles($id: ID!) {
-    article(id: $id) {
+const BLOG_QUERY = gql`
+  query Blogs($id: ID!) {
+    blog(id: $id) {
       id
       title
       content
@@ -13,9 +13,8 @@ const ARTICLE_QUERY = gql`
         id
         name
       }
-      published_at
     }
   }
 `;
 
-export default ARTICLE_QUERY;
+export default BLOG_QUERY;

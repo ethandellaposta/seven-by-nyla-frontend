@@ -4,17 +4,17 @@ import Query from "../../components/Query";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 
-import ARTICLE_QUERY from "../../queries/article/article";
+import BLOG_QUERY from "../../queries/blog/blog";
 
-const Article = () => {
+const Blog = () => {
   let { id } = useParams();
   return (
-    <Query query={ARTICLE_QUERY} id={id}>
-      {({ data: { article } }) => {
+    <Query query={BLOG_QUERY} id={id}>
+      {({ data: { blog } }) => {
         const imageUrl =
           process.env.NODE_ENV !== "development"
-            ? article.image.url
-            : process.env.REACT_APP_BACKEND_URL + article.image.url;
+            ? blog.image.url
+            : process.env.REACT_APP_BACKEND_URL + blog.image.url;
         return (
           <div>
             <div
@@ -24,14 +24,14 @@ const Article = () => {
               data-srcset={imageUrl}
               data-uk-img
             >
-              <h1>{article.title}</h1>
+              <h1>{blog.title}</h1>
             </div>
 
             <div className="uk-section">
               <div className="uk-container uk-container-small">
-                <ReactMarkdown source={article.content} />
+                <ReactMarkdown source={blog.content} />
                 <p>
-                  <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                  <Moment format="MMM Do YYYY">{blog.published_at}</Moment>
                 </p>
               </div>
             </div>
@@ -42,4 +42,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default Blog;

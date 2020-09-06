@@ -1,7 +1,7 @@
 import React from "react";
-import Articles from "../../components/Articles";
+import Blogs from "../../components/Blogs";
 import Query from "../../components/Query";
-import ARTICLES_QUERY from "../../queries/article/articles";
+import BLOGS_QUERY from "../../queries/blog/blogs";
 
 const Home = () => {
   return (
@@ -9,9 +9,9 @@ const Home = () => {
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>Strapi blog</h1>
-          <Query query={ARTICLES_QUERY}>
-            {({ data: { articles } }) => {
-              return <Articles articles={articles} />;
+          <Query query={BLOGS_QUERY}>
+            {({ data: { blogs } }) => {
+              return <Blogs blogs={blogs} />;
             }}
           </Query>
         </div>

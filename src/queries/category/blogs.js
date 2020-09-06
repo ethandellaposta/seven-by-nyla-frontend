@@ -1,11 +1,11 @@
 import gql from "graphql-tag";
 
-const CATEGORY_ARTICLES_QUERY = gql`
+const CATEGORY_BLOGS_QUERY = gql`
   query Category($id: ID!) {
     category(id: $id) {
       id
       name
-      articles {
+      blogs {
         id
         title
         content
@@ -21,4 +21,4 @@ const CATEGORY_ARTICLES_QUERY = gql`
   }
 `;
 
-export default CATEGORY_ARTICLES_QUERY;
+export default CATEGORY_BLOGS_QUERY;

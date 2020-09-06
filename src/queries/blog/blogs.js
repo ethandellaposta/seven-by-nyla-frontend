@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
-const ARTICLES_QUERY = gql`
-  query Articles {
-    articles {
+const BLOGS_QUERY = gql`
+  query Blogs {
+    blogs {
       id
       title
       category {
@@ -16,4 +16,4 @@ const ARTICLES_QUERY = gql`
   }
 `;
 
-export default ARTICLES_QUERY;
+export default BLOGS_QUERY;
