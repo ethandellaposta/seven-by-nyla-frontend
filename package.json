@@ -20,7 +20,7 @@
     "tailwind": "^4.0.0"
   },
   "scripts": {
-    "develop": "npm run watch:css && react-scripts start",
+    "start": "npm run watch:css && react-scripts start",
     "build": "npm run watch:css && react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
