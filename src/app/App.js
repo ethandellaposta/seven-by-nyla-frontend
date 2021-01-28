@@ -2,13 +2,16 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import { ServicePage } from "./service";
+import { HomePage } from "./home";
 import { Nav, Footer } from "./common";
+
 
 function App() {
   return (
-    <div className="flex flex-col p-10 justify-between ">
+    <div>
       <Nav />
       <Switch>
+        <Route path="/" component={HomePage} exact />
         <Route path="/services/:id" component={ServicePage} exact />
       </Switch>
       <Footer />

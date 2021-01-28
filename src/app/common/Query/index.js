@@ -8,5 +8,5 @@ export const Query = ({ children, query, id }) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {JSON.stringify(error)}</p>;
-  return children({ data });
+  return children(data);
 };

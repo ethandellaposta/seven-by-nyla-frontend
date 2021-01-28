@@ -21,6 +21,7 @@
     "tailwind": "^4.0.0"
   },
   "scripts": {
+    "develop": "npm run watch:css && REACT_APP_BACKEND_URL=http://localhost:1337 REACT_APP_BACKEND_JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjA2MzI5OTM0LCJleHAiOjE2MDg5MjE5MzR9.DhhuSqYTPosm_ckzmTtI1SJTJyXyIUciIk6e2WeXjfQ react-scripts start",
     "start": "npm run watch:css && react-scripts start",
     "build": "npm run watch:css && react-scripts build",
     "test": "jest",

@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  important: true,
   purge: [],
   presets: [],
   darkMode: false, // or 'media' or 'class'
@@ -26,6 +27,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      primary_pink: '#F0E1E5',
+      dark_pink: '#A4435D'
     },
     spacing: {
       px: '1px',
@@ -133,7 +136,10 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
     },
-    container: {},
+    container: {
+      center: true,
+      padding: "1.5rem",
+    },
     cursor: {
       auto: 'auto',
       default: 'default',
@@ -178,7 +184,7 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      serif: ['Lora', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
         'ui-monospace',
         'SFMono-Regular',
@@ -189,6 +195,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      xoxo: ['"Nothing You Could Do"']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
